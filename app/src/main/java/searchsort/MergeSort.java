@@ -18,13 +18,13 @@ public class MergeSort extends Sort {
     }
 
 
-    public void mergesort(int[] a) 
+    public static void mergesort(int[] a) 
     { 
         int[] aux = new int[a.length];
         mergesort(a, aux, 0, a.length - 1);
-    }
-
-    private void mergesort(int[] a, int[] aux, int lo, int hi) 
+            }
+        
+            private static void mergesort(int[] a, int[] aux, int lo, int hi) 
     {
         // Array is sorted if lo is greater than hi
         if (lo >= hi) return;
@@ -32,10 +32,10 @@ public class MergeSort extends Sort {
         mergesort(a, aux, lo, mid);      //Sort left side of array
         mergesort(a, aux, mid + 1, hi);  //Sort right side of array
         merge(a, aux, lo, mid, hi);      //Combine both halves
-
-    } 
-
-    void merge(int[] a, int[] aux, int lo, int mid, int hi){
+        
+            } 
+        
+            static void merge(int[] a, int[] aux, int lo, int mid, int hi){
         for(int k = lo; k <= hi; k++)    // copy
             aux[k] = a[k];
         int i = lo;                      // left side index
